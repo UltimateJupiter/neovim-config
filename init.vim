@@ -22,7 +22,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'nathanaelkane/vim-indent-guides'
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
+Plug 'wakatime/vim-wakatime'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
@@ -52,15 +52,19 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
-" Auto-Complete
-Plug 'roxma/nvim-completion-manager'
-
 " Easy Align
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/vim-easy-align'
 Plug 'easymotion/vim-easymotion'
 
 
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'zchee/deoplete-jedi'
+"let g:deoplete#enable_at_startup = 1
+"let g:python_host_prog  = '/usr/local/bin/python'
+"let g:python3_host_prog = '/usr/local/bin/python3'
+" Auto-Complete
+Plug 'roxma/nvim-completion-manager'
 " Initialize plugin system
 call plug#end()
 
@@ -100,3 +104,7 @@ map  N <Plug>(easymotion-prev)
 
 "nmap <F8> :TagbarToggle<CR>
 "g:tagbar_ctags_bin
+
+" UI Plugin
+Plug 'rhysd/nyaovim-popup-tooltip'
+

@@ -36,6 +36,9 @@ Plug 'ayu-theme/ayu-vim' " or other package manager
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'joshdick/onedark.vim'
 
+" Formatting
+Plug 'elzr/vim-json'
+Plug 'chrisbra/csv.vim'
 
 " Editing
 Plug 'kien/rainbow_parentheses.vim'
@@ -46,10 +49,9 @@ Plug 'severin-lemaignan/vim-minimap'
 
 "Finding
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'yuttie/comfortable-motion.vim'
+"Plug 'yuttie/comfortable-motion.vim'
 
 " Plugin options
-" Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Easy Align
@@ -81,8 +83,8 @@ map <C-h> :NERDTreeToggle<CR>
 " syntax enable
 "colorscheme solarized
 
-"set termguicolors     " enable true colors support
-"let ayucolor="light"  " for light version of theme
+set termguicolors     " enable true colors support
+let ayucolor="light"  " for light version of theme
 "let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 "colorscheme ayu
@@ -111,9 +113,6 @@ nmap <leader>8 :bfirst<CR>:7bn<CR>
 nmap <leader>9 :bfirst<CR>:8bn<CR>
 nmap <leader>10 :bfirst<CR>:9bn<CR>
 nmap <leader>11 :bfirst<CR>:10bn<CR>
-
-"set background=dark
-"colorscheme molokai
 
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)

@@ -21,6 +21,7 @@ Plug 'wakatime/vim-wakatime'
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+"Plug 'lervag/vimtex'
 
 " Airline
 "Plug 'Lokaltog/vim-powerline'
@@ -41,7 +42,8 @@ Plug 'elzr/vim-json'
 Plug 'chrisbra/csv.vim'
 
 " Editing
-Plug 'kien/rainbow_parentheses.vim'
+" Plug 'kien/rainbow_parentheses.vim'
+Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-surround'
 Plug 'dense-analysis/ale'
 Plug 'severin-lemaignan/vim-minimap'
@@ -65,6 +67,9 @@ Plug 'airblade/vim-gitgutter'
 " Easy Motion
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
+
+" Python
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 " Auto-Complete
 " Plug 'roxma/nvim-completion-manager'
@@ -97,11 +102,12 @@ let g:airline_powerline_fonts = 1
 
 " Tabline configurations
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 nmap <leader>t :TagbarToggle<CR>
 "set g:tagbar_ctags_bin
 
-nmap ] :bn<CR>
-nmap [ :bp<CR>
+nmap <C-d> :bn<CR>
+nmap <C-f> :bp<CR>
 nmap <leader>1 :bfirst<CR>
 nmap <leader>2 :bfirst<CR>:bn<CR>
 nmap <leader>3 :bfirst<CR>:2bn<CR>
@@ -140,7 +146,7 @@ let g:ale_completion_enabled = 1
 let b:ale_linters = {'python': ['mypy']}
 
 let g:indentLine_enabled = 1
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+let g:indentLine_char_list = ['┆', '┊']
 let g:indentLine_setColors = 0
 
 "let g:NERDTreeFileExtensionHighlightFullName = 1
@@ -153,3 +159,5 @@ let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+"Rainbow
+let g:rainbow_active = 1
